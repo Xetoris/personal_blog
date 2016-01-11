@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71c2cd75-36d8-4ddd-98bc-c218f60107d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="71c2cd75-36d8-4ddd-98bc-c218f60107d8" name="Default" comment="Changes:&#10;1) Updating .gitignore.">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.env.development" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.env.test" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/blog.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
     </list>
     <ignored path="blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -268,7 +277,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452480578251</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changes:&#10;1) Updating .gitignore.">
+      <created>1452480687357</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1452480687357</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -310,7 +325,8 @@
     <MESSAGE value="Changes:&#10;1) Initial checkin w/ all the default stuff.&#10;2) Added Bower setup, ignored bower folder." />
     <MESSAGE value="Merge branch 'master' of https://github.com/Xetoris/personal_blog&#10;&#10;Conflicts:&#10;&#9;.lotusrc&#10;" />
     <MESSAGE value="Changes:&#10;1) Removing weird checkin issues." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes:&#10;1) Removing weird checkin issues." />
+    <MESSAGE value="Changes:&#10;1) Updating .gitignore." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes:&#10;1) Updating .gitignore." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
