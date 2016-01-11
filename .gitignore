@@ -1,1 +1,6 @@
 apps/web/public/bower/*
+.idea/*
+
+.env.test
+.env.development
+Gemfile.lock
