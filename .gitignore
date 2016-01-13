@@ -1,4 +1,4 @@
-apps/web/public/bower/*
+apps/web/assets/bower/*
 .idea/*
 
 .env.test

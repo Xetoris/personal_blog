@@ -1,4 +1,5 @@
 require 'lotus/helpers'
+require 'lotus/assets'
 
 module Web
   class Application < Lotus::Application
@@ -82,7 +83,12 @@ module Web
       # Default format for the requests that don't specify an HTTP_ACCEPT header
       # Argument: A symbol representation of a mime type, default to :html
       #
-      # default_format :html
+      # default_request_format :html
+
+      # Default format for responses that doesn't take into account the request format
+      # Argument: A symbol representation of a mime type, default to :html
+      #
+      # default_response_format :html
 
       # HTTP Body parsers
       # Parse non GET responses body for a specific mime type
@@ -111,18 +117,40 @@ module Web
       ##
       # ASSETS
       #
+      assets do
+        # JavaScript compressor
+        #
+        # Supported engines:
+        #
+        #   * :builtin
+        #   * :uglifier
+        #   * :yui
+        #   * :closure
+        #
+        # See: http://lotusrb.org/guides/assets/compressors
+        #
+        # In order to skip JavaScript compression comment the following line
+        javascript_compressor :builtin
 
-      # Specify sources for assets
-      # The directory `public/` is added by default
-      #
-      # assets << [
-      #   'vendor/javascripts'
-      # ]
+        # Stylesheet compressor
+        #
+        # Supported engines:
+        #
+        #   * :builtin
+        #   * :yui
+        #   * :sass
+        #
+        # See: http://lotusrb.org/guides/assets/compressors
+        #
+        # In order to skip stylesheet compression comment the following line
+        stylesheet_compressor :builtin
 
-      # Enabling serving assets
-      # Defaults to false
-      #
-      # serve_assets false
+        # Specify sources for assets
+        #
+        sources << [
+          'assets'
+        ]
+      end
 
       ##
       # SECURITY
@@ -149,7 +177,7 @@ module Web
       # Web applications can send this header to mitigate Cross Site Scripting
       # (XSS) attacks.
       #
-      # The default value allows images, scripts, AJAX, and CSS from the same
+      # The default value allows images, scripts, AJAX, fonts and CSS from the same
       # origin, and does not allow any other resources to load (eg object,
       # frame, media, etc).
       #
@@ -172,7 +200,7 @@ module Web
       #  * http://content-security-policy.com/
       #  * https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Using_Content_Security_Policy
       #
-      security.content_security_policy "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';"
+      security.content_security_policy "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; font-src 'self';"
 
       ##
       # FRAMEWORKS
@@ -193,6 +221,7 @@ module Web
       # See: http://www.rubydoc.info/gems/lotus-view#Configuration
       view.prepare do
         include Lotus::Helpers
+        include Web::Assets::Helpers
       end
     end
 
@@ -202,9 +231,6 @@ module Web
     configure :development do
       # Don't handle exceptions, render the stack trace
       handle_exceptions false
-
-      # Serve static assets during development
-      serve_assets      true
     end
 
     ##
@@ -213,9 +239,6 @@ module Web
     configure :test do
       # Don't handle exceptions, render the stack trace
       handle_exceptions false
-
-      # Serve static assets during development
-      serve_assets      true
     end
 
     ##
@@ -225,6 +248,26 @@ module Web
       # scheme 'https'
       # host   'example.org'
       # port   443
+
+      assets do
+        # Don't compile static assets in production mode (eg. Sass, ES6)
+        #
+        # See: http://www.rubydoc.info/gems/lotus-assets#Configuration
+        compile false
+
+        # Use digest file name for asset paths
+        #
+        # See: http://lotusrb.org/guides/assets/digest
+        digest  true
+
+        # Content Delivery Network (CDN)
+        #
+        # See: http://lotusrb.org/guides/assets/content-delivery-network
+        #
+        # scheme 'https'
+        # host   'cdn.example.org'
+        # port   443
+      end
     end
   end
 end
