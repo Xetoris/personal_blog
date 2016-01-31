@@ -1,1 +1,1 @@
-start bundle exec lotus server --no-code-reloading
+start bundle exec hanami server --no-code-reloading

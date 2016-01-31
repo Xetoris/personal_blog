@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gem 'bundler'
 gem 'rake'
 
-gem 'lotusrb',     '0.6.0'
-gem 'lotus-model', '~> 0.5'
+gem 'hanami'
+gem 'hanami-model'
 
 
 group :test do

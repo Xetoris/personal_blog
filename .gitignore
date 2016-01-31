@@ -1,6 +1,6 @@
 apps/web/assets/bower/*
 .idea/*
-
+public/assets*
 .env.test
 .env.development
 Gemfile.lock

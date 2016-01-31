@@ -1,9 +1,8 @@
 require 'rubygems'
 require 'bundler/setup'
-require 'lotus/setup'
-require_relative '../lib/blog2'
+require 'hanami/setup'
 require_relative '../apps/web/application'
 
-Lotus::Container.configure do
+Hanami::Container.configure do
   mount Web::Application, at: '/'
 end
