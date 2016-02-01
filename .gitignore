@@ -1,6 +1,7 @@
-apps/web/assets/bower/*
 .idea/*
-public/assets*
 .env.test
 .env.development
 Gemfile.lock
+node_modules/
+public/*/*
+apps/web/assets/bower
