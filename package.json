@@ -16,6 +16,10 @@
     "url": "https://github.com/Xetoris/personal_blog/issues"
   },
   "devDependencies": {
-    "gulp": "~3.9.0"
+    "gulp": "~3.9.0",
+    "gulp-bower": "0.0.13",
+    "gulp-sass": "~2.1.1",
+    "gulp-eslint": "~1.1.1",
+    "babel-eslint": "~4.1.8"
   }
 }
