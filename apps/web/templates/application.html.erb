@@ -7,13 +7,12 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="bootstrap">
+  <%= stylesheet 'bootstrap-flex.css' %>
 </head>
 <body>
 <h1>Hello, world!</h1>
 
 <!-- jQuery first, then Bootstrap JS. -->
-<script src="jquery"></script>
-<script src="bootstrap" ></script>
+<%= javascript 'jquery.min.js', 'tether.min.js', 'bootstrap.min.js' %>
 </body>
 </html>

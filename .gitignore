@@ -4,4 +4,4 @@
 Gemfile.lock
 node_modules/
 public/*/*
-apps/web/assets/bower
+bower_components/
