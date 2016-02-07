@@ -5,3 +5,10 @@ Gemfile.lock
 node_modules/
 public/*/*
 bower_components/
+
+#Ignore CSS, use gulp to generate them!
+apps/web/assets/public/*/*
+!apps/web/assets/public/*/.gitkeep
+
+# Probably a better way to do images, but for now just don't check them in.
+apps/web/assets/images/

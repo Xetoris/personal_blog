@@ -1,0 +1,8 @@
+.cinema-nav {
+    display: flex;
+    flex-direction: row;
+
+    .cinema-nav-item {
+        flex-grow: 1;
+    }
+}
