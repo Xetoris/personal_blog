@@ -1,8 +1,55 @@
 .cinema-nav {
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
 
     .cinema-nav-item {
         flex-grow: 1;
+
+        .title {
+            background-color: $gray-dark;
+            text-align: center;
+            color: $navbar-dark-color;
+            font-size: xx-large;
+        }
     }
+
+    .cinema-nav-item:hover {
+      text-decoration: none;
+
+      .title {
+        color: $navbar-dark-hover-color;
+      }
+    }
+
+    .cinema-nav-item:visited {
+      text-decoration: none;
+    }
+
+    .cinema-nav-item:link {
+      text-decoration: none;
+    }
+
+    .cinema-nav-item:active {
+      text-decoration: none;
+    }
+}
+
+#coding-nav {
+    background-image: url($coding_link_background);
+}
+
+#gaming-nav {
+    background-image: url($gaming_link_background);
+}
+
+#tabletop-nav {
+    background-image: url($tabletop_link_background);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+#fullpage {
+  display: flex;
+  flex-direction: column;
 }
