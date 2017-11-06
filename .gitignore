@@ -1,3 +1,12 @@
 /db/*.sqlite
 /public/assets*
 /tmp
+
+# IDE Folder
+.idea/
+
+# DEV Environment Files
+.env.*
+
+# Using Linux + Windows, so ignore the Gemfile.lock
+Gemfile.lock
