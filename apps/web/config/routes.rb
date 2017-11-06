@@ -1,7 +1,7 @@
 # Configure your routes here
-# See: http://www.rubydoc.info/gems/hanami-router/#Usage
+# See: http://hanamirb.org/guides/routing/overview/
+#
+# Example:
+# get '/hello', to: ->(env) { [200, {}, ['Hello from Hanami!']] }
 
-get '/', to: 'home#index'
-#get '/gaming', to: 'gaming#list'
-#get '/coding', to: 'coding#list'
-#get '/tabletop', to: 'tabletop#list'
+root to: 'home#index'
