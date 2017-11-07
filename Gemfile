@@ -1,10 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'hanami',       '~> 1.1'
-gem 'hanami-model', '~> 1.1'
-
-gem 'sqlite3'
+gem 'hanami', '~> 1.1'
 
 group :test, :development do
   gem 'dotenv', '~> 2.0'

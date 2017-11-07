@@ -1,13 +1,12 @@
 require 'bundler/setup'
 require 'hanami/setup'
-require 'hanami/model'
 require_relative '../lib/blog'
 require_relative '../apps/web/application'
 
 Hanami.configure do
   mount Web::Application, at: '/'
 
-  model do
+  # model do
     ##
     # Database adapter
     #
@@ -18,14 +17,14 @@ Hanami.configure do
     #    adapter :sql, 'postgresql://localhost/blog_development'
     #    adapter :sql, 'mysql://localhost/blog_development'
     #
-    adapter :sql, ENV['DATABASE_URL']
+    # adapter :sql, ENV['DATABASE_URL']
 
     ##
     # Migrations
     #
-    migrations 'db/migrations'
-    schema     'db/schema.sql'
-  end
+    # migrations 'db/migrations'
+    # schema     'db/schema.sql'
+  # end
 
   mailer do
     root 'lib/blog/mailers'

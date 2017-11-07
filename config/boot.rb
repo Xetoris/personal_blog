@@ -1,2 +1,2 @@
-require_relative './vironment'
+require_relative './environment'
 Hanami.boot
